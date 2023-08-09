@@ -1,11 +1,11 @@
-import 'package:books_app/presentation/Screens/home%20screen/home_screen.dart';
+import 'package:books_app/core/utilis/routes.dart';
 import 'package:books_app/presentation/widgets/sliding_image.dart';
 import 'package:books_app/presentation/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:go_router/go_router.dart';
+// import 'package:get/get.dart';
+// import 'package:get/get_core/src/get_main.dart';
 
-import '../../core/utilis/constants.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -65,11 +65,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void navigateToHome() {
     Future.delayed(Duration(seconds: 2), () {
-      Get.to(
-        () => const HomeScreen(),
-        transition: Transition.fade,
-        duration: kTranstionDuration,
-      );
-    });
+      // Get.to(
+      //   () => const HomeScreen(),
+      //   transition: Transition.fade,
+      //   duration: kTranstionDuration,
+      // );
+    GoRouter.of(context).push(AppRouter.kHomeView);
+    },
+    );
   }
 }
