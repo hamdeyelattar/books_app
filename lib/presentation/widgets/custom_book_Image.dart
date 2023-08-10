@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../core/utilis/assets.dart';
 
-class CustomListScreenItem extends StatelessWidget {
-  const CustomListScreenItem({super.key});
+class CustomBookImage extends StatelessWidget {
+  const CustomBookImage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,11 +13,13 @@ class CustomListScreenItem extends StatelessWidget {
         height: 220,
         // width: 150,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20),
             color: Colors.white,
             image: const DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage(AssetsLogo.testImage),
+              image: AssetImage(
+                AssetsLogo.testImage,
+              ),
             )),
       ),
     );
